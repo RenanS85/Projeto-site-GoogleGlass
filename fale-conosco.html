@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sobre google-glass</title>
+<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+<link rel="stylesheet" type="text/css" href="_css/form.css">
+
+<script language = 'javascript' src = '_javascript/funcoes.js'></script>
+
+<script>
+
+function cal_tot() 
+{var qtd = parseInt(document.getElementById('c_quant').value);
+total = qtd * 1500;
+document.getElementById('c_tot').value = total;
+}
+
+</script>
+
+</head>
+
+<body>
+<div id="interface">
+    <header id ="cabecalho">
+    <hgroup>
+<h1 id="gg">Google Glass</h1>
+<img id = 'logo' src="_imagens/glass-logo-peq.jpg">
+<h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src='_imagens/contato.png'>
+
+<nav id="menu_principal">
+<h1>Menu Principal</h1>
+<ul type = "circle">
+    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>
+    </header>
+
+    <section id="corpo-full"> 
+
+        <article id = "noticia-principal">
+            <hgroup>
+                <br>
+                <br>
+                <br>
+            <h1 class = "head_article">Fale Conosco&nbsp;&nbsp;-&nbsp;&nbsp; Contato</h3>
+            <h3 class = "head_article">Formulário de Contato</h3>
+            <h1 class = "head_article">Por Renan Santana</h1>
+            <h1 class = "head_article">Atualizado em 01/Maio/2013</h1>  
+            </hgroup>
+
+
+ 
+<form method="post" action="mailto:renan.santana.s85@gmail.com" oninput= "cal_tot();">
+<fieldset id ="usuario">
+<legend class>Identificação do Usuário</legend>
+    <p> <label class for="c_nome">Nome:</label> <input type="text" name="nome" id="c_nome" size = '30' maxlength="30" placeholder="Nome Completo"></p>
+    <p><label for="c_senha">Senha:</label><input type="text" name="senha" id="c_senha" size = '12' maxlength="12" placeholder="Senha (12ch)"></p>
+    <p><label for="c_email">E-mail:</label><input type="text" name="email" id="c_email" size = '30' maxlength="30" placeholder="Email"></p>
+    <fieldset id = "sexo"><legend>Sexo:</legend>
+        <input type="radio" name="sexo" id="c_masc" checked><label for="c_masc">Masculino</label>
+        <br><br>
+        <input type="radio" name="sexo" id="c_fem"> <label for="c_fem">Feminino</label>
+    </fieldset>
+    <p><label for="c_nasc">Data de Nascimento:</label><input type="date" name="nasc" id="c_nasc" size = '30' maxlength="30" placeholder="Data de Nascimento"></p> 
+</fieldset>
+
+<fieldset id="endereco">
+<legend>Endereço do Usuário</legend>
+<p> <label for="c_log">Logradouro: </label> <input type="text" name="log" id="c_log" size = '50' maxlength="50" placeholder="Logradouro"></p>
+<p> <label for="c_num">Número: </label> <input type="number" name="num" id="c_num" size = '6' placeholder="Número" maxlength="6" min="0" max="999999"></p>
+<p><label for="c_est">Estado: </label>
+<select id="c_est" name="est">
+<optgroup label="Região Sudeste">
+    <option value="SP" >São Paulo - SP</option>
+    <option value="RJ">Rio de Janeiro - RJ</option>
+    <option value="MG" >Minas Gerais - MG</option>
+</optgroup> 
+<optgroup label="Região Sul">
+    <option value="PR">Paraná - PR</option>
+    <option value="SC" >Santa Catarina - SC</option>
+</optgroup></p>
+</select>
+
+<p> <label for="c_cid">Cidade: </label><input type="text" name="cid" id="c_cid" maxlength="40" size="40" list="cidades" ></p>
+
+<datalist id ="cidades">
+    <option value="Campinas"></option>
+    <option value="São Paulo"></option>
+    <option value="Rio de Janeiro"></option>
+    <option value="Nova Iguaçu"></option>
+    <option value="Belo Horizonte"></option>
+    <option value="Uberlândia"></option>
+    <option value="Londrina"></option>
+    <option value="Curitiba"></option>
+    <option value="Florianópolis"></option>
+    <option value="Porto Alegre"></option>
+</datalist>
+
+</fieldset>
+
+
+
+
+<fieldset id = "mesagem">
+<legend>Mensagem </legend>
+
+<p><label for="c_grau">Grau de Urgência:</label> min<input name = "grau" id="c_grau" type="range" min="0" max="10" step="1"> máx</p>
+
+
+<p><label for="c_msg">Mensagem do Usuário </label> 
+<textarea name="msg" id="c_msg" cols="45" rows="5" placeholder="Digite sua mensagem"></textarea></p>
+   
+</fieldset>
+
+<fieldset id="pedido">
+    <legend>Quero um Google Glass</legend>
+    <p><input type="checkbox" name = ped id="c_ped" checked>
+    <label for="c_ped">Gostaria de adquirir um Google Glass quando disponível</label> </p>
+    <p><label for="c_cor">Cor: </label><input type="color" name = "cor" id = "c_cor" value = "#0000FF">
+    <label for="c_quant">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quantidade: </label><input type="number" name = "quant" id = c_quant min = "0" max = "5" value="0"></p> 
+    <p><label for="c_tot">Preço Total: R$</label>
+    <input type="text" name = "tot" id = "c_tot" placeholder="Total" readonly></p>
+    <input type="image" src="_imagens/botao-enviar.png" name = "enviar" id = "b_enviar">
+</fieldset>
+</form>
+
+<footer id = "rodape">
+    <h3>Copyright &copy; 2022 - by Renan Santana</h3>
+    <h3><a href = "https://github.com/RenanS85" target="_blank">GitHub</a></h3>
+    </footer>
+    </div>
+    
+    </body>
+    
+    </html>
+
+   

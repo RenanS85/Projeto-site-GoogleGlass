@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+form {
+    width: 700px;
+    margin: auto;
+}
+
+legend{
+    color: lightblue;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;
+    font-size: 13pt;
+}
+
+label{
+    font-weight: bold;
+    text-shadow: 2px 2px 2px black;}
+
+input, textarea {
+    font-family: sans-serif;
+    font-weight: normal;
+    font-size: 13pt;
+    color: black;
+    border-radius: 5px;
+}
+
+input:hover, textarea:hover {
+    background-color: lightblue;
+    
+}
+
+fieldset {
+    border-radius: 5px;
+    margin: 20px;
+    background: rgba(13, 8, 81, 0.144)
+}

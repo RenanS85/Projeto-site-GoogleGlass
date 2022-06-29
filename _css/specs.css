@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+
+iframe#frame_spec {
+    width: 400px;
+    height: 280px;
+    border:none;
+    overflow: hidden;
+    float: right;
+}
+
+iframe#frame_spec::-webkit-scrollbar {
+    display: none;
+
+}
+
+img#esquema-marcado {
+    border: 10px solid rgba(163, 221, 224, 0.914);
+    border-radius: 10px;
+    
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sobre google-glass</title>
+<link rel="stylesheet" type="text/css" href="_css/estilo.css">
+<link rel="stylesheet" type="text/css" href="_css/specs.css">
+
+<script language = 'javascript' src = '_javascript/funcoes.js'></script>
+
+</head>
+
+<body>
+<div id="interface">
+    <header id ="cabecalho">
+    <hgroup>
+<h1 id="gg">Google Glass</h1>
+<img id = 'logo' src="_imagens/glass-logo-peq.jpg">
+<h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+<img id="icone" src="_imagens/especificacoes.png">
+
+<nav id="menu_principal">
+<h1>Menu Principal</h1>
+<ul type = "circle">
+    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
+    <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a></li>
+    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
+    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a></li>
+    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale conosco</a></li>
+</ul>
+</nav>
+    </header>
+
+<section id="corpo-full"> 
+
+    <article id = "noticia-principal">
+        <hgroup>
+            <br>
+            <br>
+            <br>
+        <h1 class = "head_article">Glass&nbsp;&nbsp;-&nbsp;&nbsp;Especificações</h3>
+        <h3 class = "head_article">Raio-X no Google Glass</h3>
+        <h1 class = "head_article">Por Renan Santana</h1>
+        <h1 class = "head_article">Atualizado em 01/Maio/2013</h1>  
+        </hgroup>
+
+<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
+
+<section id = "conteudo">
+
+<img src="_imagens/glass-esquema-marcado.jpg" id = 'esquema-marcado' usemap="#meu_mapa"/>
+<map name = "meu_mapa">
+<area shape="rect" coords="183,211,269,251" href = "google-glass.html#tela" target="janela"/>
+<area shape="circle" coords="157,244,15" href = "google-glass.html#camera" target="janela"/>
+<area shape="circle" coords="76,52,15" href = "google-glass.html#gadgets" target="janela"/>
+<area shape="poly" coords="23,136,87,220,89,260,22,167" href = "google-glass.html#sensores" target="janela"/>
+</map>
+
+<iframe id="frame_spec" src="google-glass.html" name = "janela"></iframe>
+</section>
+</article>
+</section>
+
+<footer id = "rodape">
+    <h3>Copyright &copy; 2022 - by Renan Santana</h3>
+    <h3><a href = "https://github.com/RenanS85" target="_blank">GitHub</a></h3>
+    </footer>
+    </div>
+    
+    </body>
+    
+    </html>
